@@ -49,7 +49,7 @@ reference : https://atomicdesign.bradfrost.com/chapter-2/
 
 ## 📥 Installation
 
-### Install connext-web with yarn
+### Install crunch-web with yarn
 
 Clone the project
 

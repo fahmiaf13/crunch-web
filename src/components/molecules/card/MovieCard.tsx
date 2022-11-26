@@ -12,11 +12,12 @@ type movies = {
   id: number;
 };
 
-const Card = (props: Props) => {
+const MovieCard = (props: Props) => {
   const { movie } = props;
+
   return (
-    <Link to="/" className="group">
-      <div key={movie.id} className="w-48 rounded-xl relative">
+    <Link to={`/movie/${movie.id}`} className="group">
+      <div key={movie.id} className="w-44 rounded-xl relative">
         <div className="absolute bg-darker-100/70 h-full w-full rounded-xl p-3 group-hover:bg-transparent group-hover:duration-300 duration-300">
           <div className="font-bold justify-center flex text-xl text-center group-hover:hidden group-hover:duration-300 duration-300">{movie.title}</div>
         </div>
@@ -26,4 +27,4 @@ const Card = (props: Props) => {
   );
 };
 
-export default Card;
+export default MovieCard;

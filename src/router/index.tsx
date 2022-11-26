@@ -2,7 +2,7 @@ import { useRoutes } from "react-router-dom";
 import Home from "../components/pages/Home";
 import Login from "../components/pages/Login";
 import Register from "../components/pages/Register";
-import MovieDetail from "../components/pages/MovieDetail";
+import Movie from "../components/pages/Movie";
 
 export default function Router() {
   return useRoutes([
@@ -19,7 +19,8 @@ export default function Router() {
       element: <Register />,
     },
     {
-      path: "/movie/:movieId",
+      path: "/movie/:id",
+      element: <Movie />,
     },
   ]);
 }

@@ -1,3 +1,4 @@
-import Card from "./Card";
+import MovieCard from "./MovieCard";
+import CastCard from "./CastCard";
 
-export { Card };
+export { MovieCard, CastCard };

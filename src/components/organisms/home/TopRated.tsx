@@ -3,7 +3,7 @@ import { GlobalGet } from "../../../utilities/Fetcher";
 import { BASE_URL } from "../../../constant/BASE_URL";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { Card } from "../../molecules/card";
+import { MovieCard } from "../../molecules/card";
 
 interface movieData {
   id: number;
@@ -25,10 +25,10 @@ const TopRated = () => {
     fetchMovieData();
   }, []);
   const showData = movies.map((movie: movieData) => {
-    return <Card movie={movie} key={movie.id} />;
+    return <MovieCard movie={movie} key={movie.id} />;
   });
   return (
-    <div className="bg-darker-100 p-7 rounded-xl h-full">
+    <div className="p-7 rounded-xl h-full">
       <div className="font-extrabold text-3xl text-whiter-100 mb-5">Top Rated Movie</div>
       <div className="flex flex-wrap gap-4 h-full">{showData}</div>
     </div>

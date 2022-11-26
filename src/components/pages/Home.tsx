@@ -16,10 +16,12 @@ const Home = () => {
   return (
     <Template>
       <NowPlaying />
-      <div className="my-5"></div>
-      <Popular />
-      <div className="my-5"></div>
-      <TopRated />
+      <div style={{ backgroundImage: "linear-gradient(to bottom, #1c1e32, #422c52, #753565, #ac3b68, #dc4a5b)" }}>
+        <div className="my-5"></div>
+        <Popular />
+        <div className="my-5"></div>
+        <TopRated />
+      </div>
     </Template>
   );
 };

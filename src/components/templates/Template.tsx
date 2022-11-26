@@ -9,10 +9,10 @@ interface Props {
 const Template = (props: Props) => {
   const { children } = props;
   return (
-    <SideBar>
+    <div className="">
       <Navbar />
       {children}
-    </SideBar>
+    </div>
   );
 };
 

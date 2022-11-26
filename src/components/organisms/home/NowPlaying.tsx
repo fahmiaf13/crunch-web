@@ -11,7 +11,6 @@ const NowPlaying = () => {
     try {
       let response = await GlobalGet({ url: `${BASE_URL}/movie/now_playing?api_key=${import.meta.env.VITE_MOVIE_KEY}` });
       setMovies(response.results);
-
       setIsLoading(false);
     } catch (err) {
       setIsLoading(false);

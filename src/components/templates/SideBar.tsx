@@ -6,6 +6,7 @@ import { TbReportAnalytics } from "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/logo.svg";
 
 interface Props {
   children: React.ReactNode;
@@ -29,8 +30,8 @@ const SideBar = (props: Props) => {
       <aside className="flex w-full gap-6">
         <div className={`bg-darker-100 h-screen rounded-r-2xl ${open ? "w-full md:w-72" : "w-16"} duration-500  text-whiter-100 px-4 fixed z-[999] border-r-[2px] border-darker-100`}>
           <div className="py-3 flex w-full justify-between items-center relative h-[50px]">
-            <Link to="/" className={`${!open && "hidden"} text-slate-800 font-bold text-3xl duration-500`}>
-              CRUNCH
+            <Link to="/" className={`${!open && "hidden"} text-slate-800 font-bold text-3xl duration-500 mt-2`}>
+              <img src={Logo} alt="logo" width={150} />
             </Link>
             <HiMenuAlt3 size={26} className={`cursor-pointer duration-500 ${!open && "absolute right-0"}`} onClick={() => setOpen(!open)} />
           </div>

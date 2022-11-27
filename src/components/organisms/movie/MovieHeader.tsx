@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { GlobalGet } from "../../../utilities/Fetcher";
 import { BASE_URL, IMG_URL } from "../../../constant/BASE_URL";
 import { filterLimit } from "../../../utilities/FilterLimit";
-import { countAverage } from "../../../utilities/CountAverage";
 import { CastCard } from "../../molecules/card";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -84,7 +83,6 @@ const MovieHeader = (props: Props) => {
               <div className="text-5xl font-extrabold">{movies.title}</div>
               <div className="text-md font-light my-3">{movies.overview}</div>
               <div className="flex gap-3">{showGenre}</div>
-              <div className="bg-green-700 text-xl">{countAverage(movies?.vote_average)}</div>
             </div>
             <div className="w-1/2 flex flex-col h-full justify-end items-end">
               <div>
